@@ -16,19 +16,9 @@ function App() {
       });
   }, []);
 
-  const contactDetails = contacts.map((contact) => {
-    return (
-      <Card
-        key={contact.id}
-        name={contact.name}
-        userName={contact.username}
-        website={contact.website}
-        initial={contact.name.charAt(0)}
-      />
-    );
-  });
+  
 
- // return <div className="contacts">{contactDetails}</div>;
+ //return <div className="contacts">{contactDetails}</div>;
 
  return (
   <BrowserRouter>
