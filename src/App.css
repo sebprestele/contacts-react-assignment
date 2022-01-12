@@ -29,6 +29,11 @@ a {
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
 }
 
+.contact--card.details {
+  width: 400px;
+  height: auto
+}
+
 .contact-info {
   display: flex;
   flex-direction: column;

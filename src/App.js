@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Card from "./Card";
 import Details from "./Details" 
+import Home from "./Home"
 
 function App() {
 
@@ -16,15 +16,11 @@ function App() {
       });
   }, []);
 
-  
-
- //return <div className="contacts">{contactDetails}</div>;
-
  return (
   <BrowserRouter>
   <Routes>
-     <Route path="/" element={<App />} />
-     <Route path="/Details" element={<Details />} />
+     <Route path="/" element={<Home contacts={contacts}  />}   />
+     <Route path="/Details/:id" element={<Details contacts={contacts} />} />
    
  </Routes>
 </BrowserRouter>

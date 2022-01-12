@@ -11,7 +11,7 @@ export default function Card(props) {
                <p className="username">@{props.userName}</p>
                <a href="#">{props.website}</a>
             </div>
-            <Button />
+            <Button cardId={props.userId}/>
         </div>
         
     )
