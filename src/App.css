@@ -1,38 +1,78 @@
-.App {
+h3 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p,
+a {
+  margin: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contacts {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contact--card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  height: 300px;
+  padding: 12px;
+  border: 1px solid black;
+  margin: 10px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.contact-info {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 10px;
+}
+
+.details-btn {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 40px;
+  width: 120px;
+  border: none;
+  border-radius: 10px;
+  background: #1e81b0;
   color: white;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.details-btn:hover {
+  cursor: pointer;
+  background: #70cee7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-icon-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  background: #e2e7e3;
+  margin-bottom: 10px;
+}
+
+.card--icon {
+  color: black;
+  font-size: 2.3rem;
+}
+
+.username {
+  font-size: 0.8rem;
+  text-transform: lowercase;
+  margin-top: 2px;
 }

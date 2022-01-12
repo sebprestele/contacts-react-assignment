@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Card from "./Card";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [contacts, setContacts] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((data) => {
+        setContacts(data);
+      });
+  }, []);
+
+  const contactDetails = contacts.map((contact) => {
+    return (
+      <Card
+        key={contact.id}
+        name={contact.name}
+        userName={contact.username}
+        website={contact.website}
+        initial={contact.name.charAt(0)}
+      />
+    );
+  });
+
+  return <div className="contacts">{contactDetails}</div>;
 }
 
 export default App;
