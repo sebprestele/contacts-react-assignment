@@ -14,18 +14,19 @@ console.log(person)
     return (
         <div className="contact--card details">
             {person.map((contact) => (
-                <div>
-                <p>Name: {contact.name}</p>
-                <p>Username: {contact.username}</p>
-                <p>E-Mail: {contact.email}</p>
-                <p>Phone: {contact.phone}</p>
-                <p>Company: {contact.company.name}</p>
-                <p>Website: {contact.website}</p>
-                <p>Address:</p>
-                <p>City: {contact.address.city}</p>
-                <p>Street: {contact.address.street}</p>
-                <p>Suite: {contact.address.suite}</p>
-                <p>Zipcode: {contact.address.zipcode}</p>           
+                <div className="person--details">
+                <p><span>Name:</span> {contact.name}</p>
+                <p><span>Username:</span> {contact.username}</p>
+                <p><span>E-Mail:</span> {contact.email}</p>
+                <p><span>Phone:</span> {contact.phone}</p>
+                <p><span>Company:</span> {contact.company.name}</p>
+                <p><span>Website:</span> {contact.website}</p>
+                <hr></hr>
+                <p><span>Address:</span></p>
+                <p><span>City:</span> {contact.address.city}</p>
+                <p><span>Street:</span> {contact.address.street}</p>
+                <p><span>Suite:</span> {contact.address.suite}</p>
+                <p><span>Zipcode:</span> {contact.address.zipcode}</p>           
                 </div>
  
             )
