@@ -4,13 +4,14 @@ import { Link, useParams } from "react-router-dom";
 export default function Details({ contacts }) {
   const { id } = useParams();
 
-  const person = contacts.filter((contact) => contact.id === id);
+  console.log({ contacts });
+  const person = contacts.filter((contact) => contact.id == id);
   console.log(person);
 
   return (
     <div className="contact--card details">
       {person.map((contact) => (
-        <div className="person--details">
+        <div className="person--details" key={contact.id}>
           <p>
             <span>Name:</span> {contact.name}
           </p>
