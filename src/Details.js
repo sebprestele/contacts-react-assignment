@@ -4,8 +4,8 @@ import { Link, useParams } from "react-router-dom";
 export default function Details({ contacts }) {
   const { id } = useParams();
 
-  // eslint-disable-next-line
-  const person = contacts.filter((contact) => contact.id == id) ; 
+  
+  const person = contacts.filter((contact) => contact.id === Number(id)) ; 
 
   return (
     <div className="contact--card details">
