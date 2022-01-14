@@ -9,7 +9,7 @@ export default function Card(props) {
             <div className="contact-info">
                <h3>{props.name}</h3>
                <p className="username">@{props.userName}</p>
-               <a href="hhtp://{props.website}">{props.website}</a>
+               <a href="http://{props.website}">{props.website}</a>
             </div>
             <Button cardId={props.userId}/>
         </div>
