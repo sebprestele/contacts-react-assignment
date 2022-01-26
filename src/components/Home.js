@@ -2,16 +2,21 @@ import React from "react";
 import Card from "./Card";
 import Navigation from "./Navigation";
 
-export default function Home({ sortContacts, contacts }) {
+export default function Home({ data, contacts, filterContacts, toggleSorted, sorted  }) {
+  
 
   return (
     <>
     
-    <Navigation/>
+    <Navigation 
+    handleClick={toggleSorted}
+    sorted={sorted}
+    handleChange={filterContacts}
+    />
     <main>
       
       <div className="contacts">
-        {contacts.map((contact) => (
+        { data.map((contact) => (
           <Card
             key={contact.id}
             name={contact.name}
