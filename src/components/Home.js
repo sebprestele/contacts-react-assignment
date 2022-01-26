@@ -1,15 +1,15 @@
 import React from "react";
 import Card from "./Card";
+import Navigation from "./Navigation";
 
 export default function Home({ sortContacts, contacts }) {
 
   return (
+    <>
+    
+    <Navigation/>
     <main>
       
-      {//will be used to setup a sorting button later
-      /* <div className="sort">
-      <button className="sort" onClick={sortContacts}>Sort</button>
-      </div> */}
       <div className="contacts">
         {contacts.map((contact) => (
           <Card
@@ -23,5 +23,6 @@ export default function Home({ sortContacts, contacts }) {
         ))}
       </div>
     </main>
+    </>
   );
 }

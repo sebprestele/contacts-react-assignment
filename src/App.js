@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Details from "./Details";
-import Home from "./Home";
+import Details from "./components/Details";
+import Home from "./components/Home";
 
 function App() {
   const [contacts, setContacts] = React.useState([]);

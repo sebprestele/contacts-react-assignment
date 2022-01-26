@@ -8,6 +8,7 @@ export default function Details({ contacts }) {
   const person = contacts.filter((contact) => contact.id === Number(id)) ; 
 
   return (
+    <div className="contact-details-container">
     <div className="contact--card details">
       {person.map((contact) => (
         <div className="person--details" key={contact.id}>
@@ -50,6 +51,7 @@ export default function Details({ contacts }) {
       <Link to="/" className="back-btn">
         Back to All Contacts
       </Link>
+    </div>
     </div>
   );
 }

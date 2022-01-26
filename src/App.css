@@ -10,6 +10,39 @@ a {
   margin: 10px;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+.nav--sort, .nav--search {
+  padding: 0.65em 1em; 
+  border-radius: .5em;
+  border: 1px solid grey;
+}
+
+.nav--sort:hover {
+  cursor: pointer;
+}
+
 .contacts {
   display: grid;
   grid-template-columns: 3fr 3fr 3fr;
@@ -27,6 +60,13 @@ a {
   margin: 10px;
   border-radius: 12px;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.contact-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vH;
 }
 
 .contact--card.details {
